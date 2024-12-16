@@ -12,13 +12,8 @@ function App() {
     handle.enter();
   };
   return (
-    <div className="flex w-full justify-center">
-      <button className={`mt-8 border-2 p-2 z-50 ${hide && "hidden"} `} onClick={handleClick}>
-        Enter fullscreen
-      </button>
-      <FullScreen handle={handle}>
-        <Book />
-      </FullScreen>
+    <div>
+      <Book />
     </div>
   );
 }
