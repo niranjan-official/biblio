@@ -44,7 +44,7 @@ function Book() {
       <div id="scene" className={`${sceneClass}`}>
         <div id="curtain" className={curtainClass}>
           <div className="content flex h-screen flex-col items-center justify-center text-center text-5xl text-white">
-            <h1 className="text-9xl font-extrabold">NANOPHILIA </h1>
+            <h1 className="text-9xl font-extrabold text-cyan-600">MATZONE <span className="text-white">2024</span> </h1>
             <p className=" tracking-[0.2em]">OFFICIALLY INAGRUATED</p>
           </div>
           {/* <div className="ground"></div> */}
