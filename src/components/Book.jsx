@@ -12,7 +12,7 @@ function Book() {
 
   const [trigger, setTrigger] = useState(false);
   const { width, height } = useWindowSize();
-  
+
   useEffect(() => {
     if (trigger) {
       showTime();
@@ -34,7 +34,7 @@ function Book() {
 
     setTimeout(() => {
       window.location.href =
-        "https://flipbooklets.com/pdfflipbooklets/nanophilia-2022#page1";
+        "https://flipbooklets.com/pdfflipbooklets/matzone-2024";
     }, 15000);
   };
 
@@ -44,8 +44,10 @@ function Book() {
       <div id="scene" className={`${sceneClass}`}>
         <div id="curtain" className={curtainClass}>
           <div className="content flex h-screen flex-col items-center justify-center text-center text-5xl text-white">
-            <h1 className="text-9xl font-extrabold text-cyan-600">MATZONE <span className="text-white">2024</span> </h1>
-            <p className=" tracking-[0.2em]">OFFICIALLY INAGRUATED</p>
+            <h1 className="text-9xl font-extrabold text-cyan-600">
+              MATZONE <span className="text-white">2024</span>{" "}
+            </h1>
+            <p className="tracking-[0.2em]">OFFICIALLY INAGRUATED</p>
           </div>
           {/* <div className="ground"></div> */}
           <div className="left"></div>
