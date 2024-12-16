@@ -1,50 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import './App.css'; 
+import React, { useState } from "react";
+import "./App.css";
+import Book from "./components/Book";
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
 function App() {
-  const [curtainClass, setCurtainClass] = useState("");
-  const [sceneClass, setSceneClass] = useState("");
-  const [starterClass, setStarterClass] = useState("");
-  const [isStarterVisible, setIsStarterVisible] = useState(true);
+  const handle = useFullScreenHandle();
+  const [hide, setHide] = useState(false);
 
-  useEffect(() => {
-    // Focus handling is omitted as it's not React's preferred pattern.
-    const handleKeyDown = (event) => {
-      if (event.keyCode === 13) { // Enter key
-        showTime();
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
-
-  const showTime = () => {
-    setCurtainClass("open");
-    setSceneClass("expand");
-    setStarterClass("fade-out");
-
-    setTimeout(() => {
-      setIsStarterVisible(false);
-    }, 2000);
+  const handleClick = () => {
+    setHide(true);
+    handle.enter();
   };
-
   return (
-    <div>
-      {isStarterVisible && (
-        <div id="starter" className={starterClass}>press enter</div>
-      )}
-      <div id="scene" className={sceneClass}>
-        <div id="curtain" className={curtainClass}>
-          <h1>TADA!</h1>
-          <div className="ground"></div>
-          <div className="left"></div>
-          <div className="right"></div>
-        </div>
-      </div>
+    <div className="flex w-full justify-center">
+      <button className={`mt-8 border-2 p-2 z-50 ${hide && "hidden"} `} onClick={handleClick}>
+        Enter fullscreen
+      </button>
+      <FullScreen handle={handle}>
+        <Book />
+      </FullScreen>
     </div>
   );
 }

@@ -33,7 +33,7 @@ body {
 	overflow: hidden;
 	margin-top: -300px;
 	margin-left: -600px;
-	background-color: rgb(0,0,0);
+	background: url('./assets/board.png');
 	box-shadow: 0 0 0 2px white inset;
 }
 #curtain {
@@ -76,19 +76,7 @@ body {
 	box-shadow: 0 0 100px 100px white;
 }
 
-h1 {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	display: block;
-	width: 500px;
-	height: 150px;
-	margin-top: -90px;
-	margin-left: -250px;
-	text-align: center;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 10em;
-	color: white;
+.content {
 	transform: scale(0.75);
 	opacity: 0;
 }
@@ -145,14 +133,14 @@ h1 {
 	animation-direction: normal;
 }
 
-#scene.expand h1 {
+#scene.expand .content {
 	animation-fill-mode: forwards;
-	animation-name: text-zoom, text-fade-in, text-glowing;
-	animation-duration: 5s, 1s, 1s;
-	animation-timing-function: ease-out, ease-in-out, ease-in-out;
-	animation-delay: 3s, 3s, 0s;
-	animation-iteration-count: 1, 1, infinite;
-	animation-direction: normal, normal, alternate;
+	animation-name: text-zoom, text-fade-in;
+	animation-duration: 5s, 1s;
+	animation-timing-function: ease-out;
+	animation-delay: 3s, 3s;
+	animation-iteration-count: 1, 1;
+	animation-direction: normal, normal;
 }
 
 .fade-out {
