@@ -26,18 +26,19 @@ body {
 
 #scene {
 	position: fixed;
-	top: 50%;
-	left: 50%;
-	width: 1200px;
-	height: 600px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
-	margin-top: -300px;
-	margin-left: -600px;
-	background: url('./assets/board.jpg');
+	/* margin-top: -300px;
+	margin-left: -600px; */
+	background: url('./assets/banner.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: 0 0 0 2px white inset;
+	background-color: black;
 }
 #curtain {
 	top: 0;
@@ -88,7 +89,7 @@ body {
 	opening
 ********** */
 
-#scene.expand {
+/* #scene.expand {
 	width: 140%;
 	left: -20%;
 	margin-left: 0;
@@ -101,7 +102,7 @@ body {
 	animation-delay: 0s, 2.5s;
 	animation-iteration-count: 1, 1;
 	animation-direction: normal, normal;
-}
+} */
 
 #curtain.open .left,
 #curtain.open .right {
@@ -126,7 +127,7 @@ body {
 	animation-direction: normal, normal;
 }
 
-#scene.expand .ground {
+/* #scene.expand .ground {
 	animation-fill-mode: forwards;
 	animation-name: ground-rising;
 	animation-duration: 6s;
@@ -134,9 +135,9 @@ body {
 	animation-delay: 0s;
 	animation-iteration-count: 1;
 	animation-direction: normal;
-}
+} */
 
-#scene.expand .content {
+/* #scene.expand .content {
 	animation-fill-mode: forwards;
 	animation-name: text-zoom, text-fade-in;
 	animation-duration: 5s, 1s;
@@ -144,7 +145,7 @@ body {
 	animation-delay: 3s, 3s;
 	animation-iteration-count: 1, 1;
 	animation-direction: normal, normal;
-}
+} */
 
 .fade-out {
 	animation-fill-mode: forwards;

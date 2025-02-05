@@ -32,10 +32,10 @@ function Book() {
       setRun(true);
     }, 5000);
 
-    setTimeout(() => {
-      window.location.href =
-        "https://flipbooklets.com/pdfflipbooklets/matzone-2024";
-    }, 15000);
+    // setTimeout(() => {
+    //   window.location.href =
+    //     "https://flipbooklets.com/pdfflipbooklets/matzone-2024";
+    // }, 15000);
   };
 
   return (
@@ -43,18 +43,19 @@ function Book() {
       {isStarterVisible && <div id="starter" className={starterClass}></div>}
       <div id="scene" className={`${sceneClass}`}>
         <div id="curtain" className={curtainClass}>
-          <div className="content flex h-screen flex-col items-center justify-center text-center text-5xl text-white">
-            <h1 className="text-9xl text-[#2ea3c3] azonix">
-              MATZONE <span className="text-white">2024</span>{" "}
-            </h1>
-            <p className="tracking-[0.2em]">OFFICIALLY INAGRUATED</p>
-          </div>
+        
           <div className="left"></div>
           <div className="right"></div>
         </div>
       </div>
       <Trigger setTrigger={setTrigger} />
-      <ReactConfetti numberOfPieces={500} recycle={false} run={run} width={width} height={height} />
+      <ReactConfetti
+        numberOfPieces={1200}
+        recycle={false}
+        run={run}
+        width={width}
+        height={height}
+      />
     </div>
   );
 }
